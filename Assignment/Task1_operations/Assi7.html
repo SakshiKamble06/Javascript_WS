@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assignment 7</title>
+</head>
+
+<body>
+
+<h2>Voting Eligibility</h2>
+
+<p id="result"></p>
+
+<script>
+
+let age = prompt("Enter age:");
+let citizen = prompt("Are you a citizen? (true/false)");
+
+age = Number(age);
+citizen = (citizen === "true");
+
+let eligible = (age >= 18) && citizen;
+
+let output = "";
+output += "Enter age: " + age + "<br>";
+output += "Are you a citizen: " + citizen + "<br>";
+output += "Eligible to vote: " + eligible;
+
+document.getElementById("result").innerHTML = output;
+
+</script>
+
+</body>
+</html>

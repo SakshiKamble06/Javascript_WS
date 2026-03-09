@@ -1,0 +1,2 @@
+// DataTypes in javascript
+//  Ass

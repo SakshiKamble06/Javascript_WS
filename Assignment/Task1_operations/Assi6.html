@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assignment 6</title>
+</head>
+
+<body>
+
+<h2>Rectangle Calculation</h2>
+
+<p id="result"></p>
+
+<script>
+
+let length = prompt("Enter length:");
+let width = prompt("Enter width:");
+
+length = Number(length);
+width = Number(width);
+
+let perimeter = 2 * (length + width);
+let area = length * width;
+
+let check = perimeter > area;
+
+let output = "";
+output += "Enter length: " + length + "<br>";
+output += "Enter width: " + width + "<br>";
+output += "Perimeter: " + perimeter + "<br>";
+output += "Area: " + area + "<br>";
+output += "Is perimeter greater than area? " + check;
+
+document.getElementById("result").innerHTML = output;
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BMI Calculator</title>
+</head>
+
+<body>
+
+<h2>BMI Calculator</h2>
+
+<p id="result"></p>
+
+<script>
+
+let weight = prompt("Enter weight (kg):");
+let height = prompt("Enter height (m):");
+
+weight = Number(weight);
+height = Number(height);
+
+let bmi = weight / (height * height);
+
+let category = "";
+
+if (bmi < 18.5) {
+    category = "Underweight";
+}
+else if (bmi >= 18.5 && bmi < 24.9) {
+    category = "Normal weight";
+}
+else if (bmi >= 25 && bmi < 29.9) {
+    category = "Overweight";
+}
+else {
+    category = "Obesity";
+}
+
+let output = "";
+output += "Enter weight (kg): " + weight + "<br>";
+output += "Enter height (m): " + height + "<br>";
+output += "BMI: " + bmi.toFixed(2) + "<br>";
+output += "Category: " + category;
+
+document.getElementById("result").innerHTML = output;
+
+</script>
+
+</body>
+</html>

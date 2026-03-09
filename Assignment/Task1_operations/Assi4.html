@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assignment Operators Example</title>
+</head>
+
+<body>
+
+<h2>Assignment 4: Assignment Operators</h2>
+
+<p id="output"></p>
+
+<script>
+
+let x = 10;
+let result = "";
+
+result += "Initial value of x: " + x + "<br>";
+
+x += 5;
+result += "After adding 5: " + x + "<br>";
+
+x *= 3;
+result += "After multiplying by 3: " + x + "<br>";
+
+x -= 10;
+result += "After subtracting 10: " + x + "<br>";
+
+x /= 2;
+result += "After dividing by 2: " + x + "<br>";
+
+x %= 3;
+result += "Modulus with 3: " + x;
+
+document.getElementById("output").innerHTML = result;
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Operator Precedence</title>
+</head>
+
+<body>
+
+<h2>Assignment 5: Operator Precedence</h2>
+
+<p id="output"></p>
+
+<script>
+
+let result = "";
+
+let exp1 = 10 + 3 * 5;
+result += "1. 10 + 3 * 5 = " + exp1 + "<br>";
+
+let exp2 = (10 + 3) * 5;
+result += "2. (10 + 3) * 5 = " + exp2 + "<br>";
+
+let exp3 = 20 / 2 + 3;
+result += "3. 20 / 2 + 3 = " + exp3 + "<br>";
+
+let exp4 = 20 / (2 + 3);
+result += "4. 20 / (2 + 3) = " + exp4 + "<br><br>";
+
+result += "5. Difference: Multiplication and division have higher precedence than addition. Parentheses change the order of calculation.";
+
+document.getElementById("output").innerHTML = result;
+
+</script>
+
+</body>
+</html>
