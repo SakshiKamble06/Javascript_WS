@@ -1,40 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Fibonacci Sequence</title>
-</head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fibonacci Series</title>
+  </head>
+  <body>
+    <script>
+      let n = Number(prompt("Enter number of terms:"));
 
-<body>
+      let a = 0;
+      let b = 1;
 
-<h2>Fibonacci Sequence</h2>
+      document.write("Fibonacci Series: <br>");
+      document.write(a + " " + b + " ");
 
-<label>How many terms?</label>
-<input type="number" id="num">
-<button onclick="generate()">Generate</button>
+      for (i = 3; i <= n; i++) {
+        let c = a + b;
+        document.write(c + " ");
 
-<p id="result"></p>
-
-<script>
-
-function generate()
-{
-    let n = document.getElementById("num").value;
-
-    let a = 0, b = 1, c;
-    let output = "Fibonacci sequence: ";
-
-    for(let i = 1; i <= n; i++)
-    {
-        output += a + " ";
-        c = a + b;
         a = b;
         b = c;
-    }
-
-    document.getElementById("result").innerHTML = output;
-}
-
-</script>
-
-</body>
+      }
+    </script>
+  </body>
 </html>

@@ -1,41 +1,28 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Armstrong Number</title>
-</head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Armstrong Number</title>
+  </head>
+  <body>
+    <script>
+      let num = Number(prompt("Enter a number:"));
+      let original = num;
+      let sum = 0;
 
-<body>
+      while (num > 0) {
+        let digit = num % 10;
+        sum = sum + digit * digit * digit;
 
-<h2>Armstrong Number Checker</h2>
+        num = Math.floor(num / 10);
+      }
 
-<label>Enter Number:</label>
-<input type="number" id="num">
-<button onclick="check()">Check</button>
-
-<p id="result"></p>
-
-<script>
-
-function check()
-{
-    let num = document.getElementById("num").value;
-    let temp = num;
-    let sum = 0;
-
-    while(temp > 0)
-    {
-        let rem = temp % 10;
-        sum += rem * rem * rem;
-        temp = Math.floor(temp / 10);
-    }
-
-    if(sum == num)
-        document.getElementById("result").innerHTML = "It is an Armstrong Number";
-    else
-        document.getElementById("result").innerHTML = "It is NOT an Armstrong Number";
-}
-
-</script>
-
-</body>
+      if (sum == original) {
+        document.write(original + " is an Armstrong Number");
+      } else {
+        document.write(original + " is NOT an Armstrong Number");
+      }
+    </script>
+  </body>
 </html>
