@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 10</title>
+</head>
+<body>
+     <h2> Palindrome Checker</h2>
+        <p id ="result"></p>
+
+     <script>
+       
+      let  str1 = prompt( "Enter a string :")  
+     let revSTR = ''
+    len1 = str1.length
+
+    for(let i =len1-1; i>=0; i--){
+        revSTR += str1[i]
+     
+    }
+    if(str1 === revSTR){
+           document.getElementById("result").innerHTML = str1 + " is a Palindrome"
+    }else{
+            document.getElementById("result").innerHTML = str1 + " is not  a Palindrome"
+
+    }
+
+
+     </script>
+</body>
+</html>

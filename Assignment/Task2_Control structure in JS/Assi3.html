@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assignment 3</title>
+</head>
+
+<body>
+
+<h2>Guess the number</h2>
+
+<script>
+
+let SystemGeneratedNumber = Math.floor(Math.random() * 10) + 1
+document.write("Generated Number: " + SystemGeneratedNumber + "<br>")
+
+let userNo = 0
+
+while(userNo !== SystemGeneratedNumber){
+
+    userNo = Number(prompt("Enter a number"))
+
+    if(userNo < SystemGeneratedNumber){
+        document.write(userNo + " - Too low! Try again.<br>")
+    }
+    else if(userNo > SystemGeneratedNumber){
+        document.write(userNo + " - Too high! Try again.<br>")
+    }
+    else{
+        document.write(userNo + " - Correct! You guessed the number.<br>")
+    }
+
+}
+
+</script>
+
+</body>
+</html>
